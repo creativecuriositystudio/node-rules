@@ -14,33 +14,33 @@
   },
   "contributors": [
     {
-        "name": "Abdul Munim Kazia",
-        "email" : "munim2020@gmail.com",
-        "url" : "http://munimkazia.com"
+      "name": "Abdul Munim Kazia",
+      "email": "munim2020@gmail.com",
+      "url": "http://munimkazia.com"
     },
     {
-        "name": "ramanaveli2i",
-        "url" : "https://github.com/ramanaveli2i"
+      "name": "ramanaveli2i",
+      "url": "https://github.com/ramanaveli2i"
     }
   ],
-  "repository" : { 
-      "type" : "git",
-      "url" : "https://github.com/mithunsatheesh/node-rules"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mithunsatheesh/node-rules"
   },
   "dependencies": {
-    "underscore": ">= 1.7"
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
-      "mocha": "1.6.0",
-      "chai": "*",
-      "colors" : "1.0.3"
+    "mocha": "1.6.0",
+    "chai": "*",
+    "colors": "1.0.3"
   },
   "main": "index.js",
   "engines": {
     "node": ">= 0.4.x"
   },
   "scripts": {
-   "test": "./node_modules/mocha/bin/mocha"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "readmeFilename": "README.md"
 }
