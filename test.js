@@ -1,13 +1,10 @@
-process.on('unhandledRejection', (err) => {
-  console.log('Unhandled rejection');
-  console.log(err.stack);
-});
+process.on('unhandledRejection', (err) => console.log(err.stack));
 
 var RuleEngine = require('./lib/node-rules.js');
 
 var engine = new RuleEngine([{
-    condition: [{ length: { $lt: 7 } }, { length: { $lte: 5 }}],
-    consequence: function (engine) { this.length = 1; this.matched = true; engine.stop(); },
+    condition: [{ items: { '#min': { $lt: 4 }}}, { 'items#max': { $maxOf: { $field: 'items' } }}],
+    consequence: function (engine) { this.items = false; this.matched = true; engine.stop(); },
 }]);
 
-engine.execute({ length: 5 }).then(console.log);
+engine.execute({ items: [1, 3, 5, 2], item: 4 }).then(console.log);
